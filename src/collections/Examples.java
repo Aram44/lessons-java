@@ -31,9 +31,15 @@ public class Examples {
         Iterator<Integer> iterator = list.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
+            iterator.remove();
         }
 
         List copyOnWriteArrayList = new CopyOnWriteArrayList();
+        copyOnWriteArrayList.add(1);
+        for (var it: copyOnWriteArrayList){
+            copyOnWriteArrayList.add(it);
+        }
+        System.out.println(copyOnWriteArrayList);
         copyOnWriteArrayList.add(list);
         copyOnWriteArrayList.get(0);
         Set copyOnWriteArraySet = new CopyOnWriteArraySet();
@@ -41,5 +47,6 @@ public class Examples {
         Set syncSet = Collections.synchronizedSet(set);
         Map syncMap = Collections.synchronizedMap(map);
         Map cuncurrentHashMap = new ConcurrentHashMap();
+
     }
 }
