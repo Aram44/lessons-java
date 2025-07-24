@@ -6,3 +6,4 @@ public class Supplier implements java.util.function.Supplier {
         return null;
     }
 }
+
