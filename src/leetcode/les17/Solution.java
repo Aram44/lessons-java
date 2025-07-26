@@ -20,8 +20,6 @@ public class Solution {
     }
 
     private static void backtrack(int i, String curStr, String digits) {
-        System.out.println(i);
-
         if (curStr.length() == digits.length()) {
             res.add(curStr);
             return;
