@@ -20,4 +20,10 @@ public class Solution {
         }
         return true;
     }
+
+    public boolean isPalindromeV2(String s) {
+        String simplified = s.replaceAll("[^A-Za-z0-9]", "");
+        String reversed = new StringBuilder(simplified).reverse().toString();
+        return simplified.equalsIgnoreCase(reversed);
+    }
 }
