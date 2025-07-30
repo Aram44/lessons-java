@@ -45,4 +45,13 @@ public class Solution {
             }
         }
     }
+
+    void traverse(char grid[][],int i,int j,int r,int c){
+        if(i<0||i>=r||j<0||j>=c||grid[i][j]=='0') return;
+        grid[i][j]='0';
+        traverse(grid,i+1,j,r,c);//to down
+        traverse(grid,i-1,j,r,c);//to up
+        traverse(grid,i,j+1,r,c);//to right
+        traverse(grid,i,j-1,r,c);//to left
+    }
 }

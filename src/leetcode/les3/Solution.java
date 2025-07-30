@@ -17,7 +17,7 @@ public class Solution {
         }
         int res = 1;
         for (int i = s.length(); i > 0; i--) {
-            for (int j = 0; j < s.length() - i+1; j++) {
+            for (int j = 0; j < s.length() - i + 1; j++) {
                 var length = Math.min(i + j, s.length());
                 var sub = s.substring(j, length);
                 Set<Character> charSet = sub.chars()
@@ -33,7 +33,6 @@ public class Solution {
 
     //Optimise
     public static int lengthOfLongestSubstring1(String s) {
-
         int left = 0;
         int n = s.length();
         int max = 0;
